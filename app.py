@@ -2,12 +2,11 @@
 from joblib import load
 from flask import Flask, request, app, jsonify, url_for, render_template
 import numpy as np
-import pandas as pd
 
 app = Flask(__name__)
 
 # load the prediction model pipeline (Feature Scaler + Estimator)
-pipeline = load('./model/bike_rent_count.mod')
+pipeline = load('/model/bike_rent_count.mod')
 
 @app.route('/')
 def homepage():
